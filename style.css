@@ -10,7 +10,7 @@ body {
     font-family: "Work Sans", sans-serif;
     margin: 0;
     padding: 0;
-    min-height: 3000px;
+    min-height: 4000px;
 }
 
 .hero::before {
@@ -59,7 +59,7 @@ body {
 
 .hero a {
     color: var(--pink);
-    background-color:rgb(132, 124, 9);
+    background-color: rgb(132, 124, 9);
     text-decoration: none;
 }
 
@@ -94,10 +94,11 @@ body {
 }
 
 .mynavbar .nav-link {
-    transition: color 0.3s ease, box-shadow 0.3s ease; /* Menambahkan transisi untuk efek warna dan bayangan */
+    transition: color 0.3s ease, box-shadow 0.3s ease;
+    /* Menambahkan transisi untuk efek warna dan bayangan */
 }
 
-.mynavbar .nav-link:hover{
+.mynavbar .nav-link:hover {
     color: rgb(132, 124, 9);
     box-shadow: #757171;
 }
@@ -115,9 +116,11 @@ body {
     position: relative;
     text-align: center;
 }
+
 .home h2,
 .info h2,
-.story h2{
+.galery h2,
+.rsvp h2 {
     font-family: 'Great Vibes', cursive;
     margin-top: 3%;
     font-size: 5rem;
@@ -125,21 +128,21 @@ body {
 }
 
 .home h3,
-.info h3{
+.info h3 {
     color: rgb(143, 139, 135);
     font-size: 1.6rem;
 }
 
-.home p
-{
+.home p {
     color: rgb(177, 172, 172);
     font-size: 1.1rem;
 }
 
 .home .no-outline {
     border: 25px;
-    box-shadow: 10px; 
-    text-align: center;/* Menghapus bayangan jika ada */
+    box-shadow: 10px;
+    text-align: center;
+    /* Menghapus bayangan jika ada */
 }
 
 .home .img {
@@ -149,7 +152,7 @@ body {
 }
 
 /*info*/
-.info{
+.info {
     background-image: url(img/info.png);
     background-position: center;
     background-repeat: no-repeat;
@@ -162,7 +165,7 @@ body {
 
 .info a {
     color: var(--pink);
-    background-color:rgb(132, 124, 9);
+    background-color: rgb(132, 124, 9);
     text-decoration: none;
 }
 
@@ -170,22 +173,96 @@ body {
     background-color: rgb(173, 169, 169);
     color: rgb(251, 251, 249);
 }
-.info p{
-    color:rgb(132, 124, 9) ;
+
+.info p {
+    color: rgb(132, 124, 9);
 }
-.info h1{
+
+.info h1 {
     box-shadow: 20px;
-    color:rgb(132, 124, 9) ;
+    color: rgb(132, 124, 9);
 }
 
 /*story*/
 
-.story{
+.story {
     min-height: auto;
     padding-top: 7rem;
     padding-bottom: 5rem;
     position: relative;
     text-align: center;
+}
+
+.story h2{
+    font-family: 'Great Vibes', cursive;
+    margin-top: 5%;
+    font-size: 3rem;
+    color: rgb(132, 124, 9);
+}
+
+.story p {
+    color: rgb(143, 139, 135);
+    font-size: 1.3rem;
+}
+
+.owl-carousel .item {
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.owl-carousel .item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.owl-item {
+    transform: scale(0.8);
+    opacity: 0.6;
+}
+
+.owl-item.active.center {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.owl-item.active.center img {
+    transform: scale(1.2);
+}
+
+/*Galery*/
+.galery {
+    background-color: beige;
+    min-height: auto;
+    padding-top: 7rem;
+    padding-bottom: 5rem;
+    position: relative;
+    text-align: center;
+}
+
+.galery p {
+    color: rgb(143, 139, 135);
+    font-size: 1.3rem;
+}
+
+/*Rsvp*/
+.rsvp {
+    background-image: url(img/rsvp1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: auto;
+    padding-top: 7rem;
+    padding-bottom: 5rem;
+    position: relative;
+    text-align: center;
+}
+
+.rsvp p {
+    color: rgb(143, 139, 135);
+    font-size: 1.3rem;
 }
 
 
@@ -212,16 +289,17 @@ body {
 
 /* Responsif untuk HP */
 @media (max-width: 768px) {
-    .mynavbar{
-        background-color: #757171;
-        backdrop-filter: none;
-    }
-    .mynavbar.offcanvas{
+    .mynavbar {
         background-color: #757171;
         backdrop-filter: none;
     }
 
-    .simply-countdown > .simply-section {
+    .mynavbar.offcanvas {
+        background-color: #757171;
+        backdrop-filter: none;
+    }
+
+    .simply-countdown>.simply-section {
         padding: 10px;
         margin: 2px;
     }
@@ -245,7 +323,7 @@ body {
 
 /* Responsif untuk HP kecil */
 @media (max-width: 480px) {
-    .simply-countdown > .simply-section {
+    .simply-countdown>.simply-section {
         padding: 10px;
         margin: 2px;
     }
@@ -269,18 +347,25 @@ body {
     /* Penyesuaian untuk countdown */
     .simply-countdown {
         display: flex;
-        flex-direction: column; /* Atur arah menjadi kolom */
-        align-items: center; /* Pusatkan item */
-        font-size: 1.5rem; /* Ukuran font lebih kecil */
+        flex-direction: column;
+        /* Atur arah menjadi kolom */
+        align-items: center;
+        /* Pusatkan item */
+        font-size: 1.5rem;
+        /* Ukuran font lebih kecil */
     }
 
     .simply-countdown .simply-section {
-        width: 100%; /* Memastikan lebar penuh */
-        text-align: center; /* Pusatkan teks */
-        padding: 5px; /* Mengurangi padding untuk ruang lebih */
+        width: 100%;
+        /* Memastikan lebar penuh */
+        text-align: center;
+        /* Pusatkan teks */
+        padding: 5px;
+        /* Mengurangi padding untuk ruang lebih */
     }
 
     .simply-countdown .simply-section div {
-        margin: 0; /* Hapus margin untuk menghemat ruang */
+        margin: 0;
+        /* Hapus margin untuk menghemat ruang */
     }
 }
