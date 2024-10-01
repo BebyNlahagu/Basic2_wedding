@@ -10,7 +10,7 @@ body {
     font-family: "Work Sans", sans-serif;
     margin: 0;
     padding: 0;
-    min-height: 4000px;
+    min-height: 5000px;
 }
 
 .hero::before {
@@ -120,7 +120,8 @@ body {
 .home h2,
 .info h2,
 .galery h2,
-.rsvp h2 {
+.rsvp h2,
+.gift h2 {
     font-family: 'Great Vibes', cursive;
     margin-top: 3%;
     font-size: 5rem;
@@ -133,7 +134,8 @@ body {
     font-size: 1.6rem;
 }
 
-.home p {
+.home p,
+.gift p {
     color: rgb(177, 172, 172);
     font-size: 1.1rem;
 }
@@ -249,7 +251,7 @@ body {
 
 /*Rsvp*/
 .rsvp {
-    background-image: url(img/rsvp1.jpg);
+    background-image: url(img/rsvp2.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -264,6 +266,68 @@ body {
     color: rgb(143, 139, 135);
     font-size: 1.3rem;
 }
+
+
+.gift{
+    background-color: antiquewhite;
+    min-height: auto;
+    padding-top: 7rem;
+    padding-bottom: 5rem;
+    position: relative;
+    text-align: center;
+}
+
+.gift button {
+    color: var(--pink);
+    background-color: rgb(132, 124, 9);
+    text-decoration: none;
+    outline: none; /* Menghapus outline */
+    border: 2px solid var(--pink); /* Menambahkan border */
+    border-radius: 5px; /* Menambahkan sudut melengkung pada border (opsional) */
+    padding: 10px 20px; /* Menambahkan padding untuk membuat tombol lebih besar */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Menambahkan efek transisi */
+}
+
+.gift button:hover {
+    background-color: var(--pink);
+    color: rgb(132, 124, 9);
+}
+
+/*footer*/
+footer {
+    padding: 2rem;
+    background-image: url(img/foto/1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative; /* Tambahkan posisi relatif */
+    color:white;
+    font-weight: 800;
+    font-size: 1.4rem;
+}
+
+footer a{
+    text-decoration: none;
+    color: rgb(132, 124, 9);
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.5); /* Warna putih dengan transparansi */
+    backdrop-filter: blur(4px);
+    z-index: 1; /* Pastikan ini berada di bawah teks */
+}
+
+footer > * {
+    position: relative; /* Pastikan konten footer tetap di atas */
+    z-index: 2; /* Pastikan konten di atas blur */
+}
+
 
 
 
