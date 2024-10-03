@@ -71,7 +71,6 @@
             </div>
         </div>
     </nav>
-
     <!--navabr end-->
 
     <!--Section Home start-->
@@ -367,7 +366,8 @@
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste pariatur repellendus dolorum. Atque, illo porro!</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste pariatur repellendus
+                                    dolorum. Atque, illo porro!</p>
                             </div>
                         </div>
                     </div>
@@ -377,6 +377,30 @@
     </section>
     <!--Section Gift End-->
 
+    <!--ucapan start-->
+    <section class="ucapan">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-md-12 mb-3 text-center">
+                    <img src="img/flowers.png" alt="">
+                    <h2>Ucapan & Doa</h2>
+                </div>
+            </div>
+            <div class="row">
+                <form id="ucapanForm">
+                    <label for="nama">Nama:</label>
+                    <input type="text" id="nama" name="nama" required>
+                    <label for="ucapan">Ucapan atau Doa:</label>
+                    <textarea id="ucapan" name="ucapan" required></textarea>
+                    <button type="submit">Kirim</button>
+                </form>
+
+                <div id="ucapanList" class="ucapan-list"></div>
+            </div>
+        </div>
+    </section>
+    <!--ucapan end-->
+    
     <footer>
         <div class="container">
             <div class="row">
@@ -521,6 +545,42 @@
         }
     </script>
 
+    <!--Ucapan Dan Doa-->
+    <script>// Tangkap elemen form, daftar ucapan, dan daftar nama pengirim
+        const ucapanForm = document.getElementById('ucapanForm');
+        const ucapanList = document.getElementById('ucapanList');
+        const namaList = document.getElementById('namaList');
+        
+        // Event listener untuk menangani submit form
+        ucapanForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+        
+            // Ambil data dari input
+            const nama = document.getElementById('nama').value;
+            const ucapan = document.getElementById('ucapan').value;
+        
+            // Buat elemen baru untuk menampilkan ucapan
+            const ucapanItem = document.createElement('div');
+            ucapanItem.classList.add('ucapan-item');
+        
+            const ucapanContent = `
+                <h3>${nama}</h3>
+                <p>${ucapan}</p>
+            `;
+            ucapanItem.innerHTML = ucapanContent;
+        
+            // Tambahkan ucapan ke daftar ucapan
+            ucapanList.appendChild(ucapanItem);
+        
+            // Tambahkan nama pengirim ke daftar nama pengirim
+            const namaItem = document.createElement('li');
+            namaItem.textContent = nama;
+            namaList.appendChild(namaItem);
+        
+            // Reset form
+            ucapanForm.reset();
+        });
+        </script>
 </body>
 
 </html>

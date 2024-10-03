@@ -121,7 +121,8 @@ body {
 .info h2,
 .galery h2,
 .rsvp h2,
-.gift h2 {
+.gift h2,
+.ucapan h2 {
     font-family: 'Great Vibes', cursive;
     margin-top: 3%;
     font-size: 5rem;
@@ -263,8 +264,23 @@ body {
 }
 
 .rsvp p {
-    color: rgb(143, 139, 135);
+    color: rgb(86, 84, 82);
     font-size: 1.3rem;
+}
+
+.rsvp button {
+    color: var(--pink);
+    background-color: rgb(132, 124, 9);
+    text-decoration: none;
+    border: 2px solid var(--pink); /* Menambahkan border */
+    border-radius: 5px; /* Menambahkan sudut melengkung pada border (opsional) */
+    padding: 10px 20px; /* Menambahkan padding untuk membuat tombol lebih besar */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Menambahkan efek transisi */
+}
+
+.rsvp button:hover {
+    background-color: var(--pink);
+    color: rgb(132, 124, 9);
 }
 
 
@@ -276,7 +292,7 @@ body {
     position: relative;
     text-align: center;
 }
-
+/*gift*/
 .gift button {
     color: var(--pink);
     background-color: rgb(132, 124, 9);
@@ -291,6 +307,18 @@ body {
 .gift button:hover {
     background-color: var(--pink);
     color: rgb(132, 124, 9);
+}
+
+.ucapan{
+    background-image: url(img/rsvp2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: auto;
+    padding-top: 7rem;
+    padding-bottom: 5rem;
+    position: relative;
+    text-align: center;
 }
 
 /*footer*/
